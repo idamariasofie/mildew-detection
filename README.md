@@ -1,46 +1,39 @@
-# ![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
+## Cherry leaves - mildew detection using CNN
 
-## Template Instructions
+An image classifier machine learning project for mildew detection on cherry leaves, utilizing convolutional neural networks (CNN).
 
-Welcome,
+## Table of Contents
 
-This is the Code Institute student template for the Cherry Leaves project option in Predictive Analytics. We have preinstalled all of the tools you need to get started. It's perfectly okay to use this template as the basis for your project submissions. Click the `Use this template` button above to get started.
+Project Dataset
+Business Requirements
+Hypothesis and Validation
+The rationale to map the business requirements to the Data Visualizations and ML tasks
+Epics
+User Stories
+Data Collection and Preparation
+Data Visualization
+Model Training, Optimization, and Evaluation
+Dashboard Planning, Designing, and Development and Deployment
+API Development and Deployment
+ML Business Case
+Dashboard Design (Streamlit App User Interface)
+Page 1: Home
+Page 2: Project Summary
+Page 3: Data Visualization
+Page 4: Predict Gender
+Page 5: Hypothesis and Validation
+Page 6: ML Metrics
+Page 7: API
+Deployment
+Main Data Analysis & Machine Learning Libraries
+Run locally
+Credits
 
-You can safely delete the Template Instructions section of this README.md file and modify the remaining paragraphs for your own project. Please do read the Template Instructions at least once, though! It contains some important information about the IDE and the extensions we use.
+## Project Dataset
 
-## How to use this repo
+Dataset used provided by Code Institute.
 
-1. Use this template to create your GitHub project repo
-
-1. Log into your cloud IDE with your GitHub account.
-
-1. On your Dashboard, click on the New Workspace button
-
-1. Paste in the URL you copied from GitHub earlier
-
-1. Click Create
-
-1. Wait for the workspace to open. This can take a few minutes.
-
-1. Open a new terminal and `pip3 install -r requirements.txt`
-
-1. Open the jupyter_notebooks directory, and click on the notebook you want to open.
-
-1. Click the kernel button and choose Python Environments.
-
-Note that the kernel says Python 3.8.18 as it inherits from the workspace, so it will be Python-3.8.18 as installed by our template. To confirm this, you can use `! python --version` in a notebook code cell.
-
-## Cloud IDE Reminders
-
-To log into the Heroku toolbelt CLI:
-
-1. Log in to your Heroku account and go to _Account Settings_ in the menu under your avatar.
-2. Scroll down to the _API Key_ and click _Reveal_
-3. Copy the key
-4. In the terminal, run `heroku_config`
-5. Paste in your API key when asked
-
-You can now use the `heroku` CLI program - try running `heroku apps` to confirm it works. This API key is unique and private to you, so do not share it. If you accidentally make it public, then you can create a new one with _Regenerate API Key_.
+I have not included the actual data in this repo, if you would like to inspect the dataset, please follow the steps in Run locally to download the dataset to your local machine.
 
 ## Dataset Content
 
@@ -56,17 +49,69 @@ To save time in this process, the IT team suggested an ML system that detects in
 - 1 - The client is interested in conducting a study to visually differentiate a healthy cherry leaf from one with powdery mildew.
 - 2 - The client is interested in predicting if a cherry leaf is healthy or contains powdery mildew.
 
-## Hypothesis and how to validate?
+## Hypothesis and validation
 
-- List here your project hypothesis(es) and how you envision validating it (them).
+Hypothesis: Powdery mildew can be detected using an average image study. 
+
+How to validate: Conducting an average image study of cherry leaves, with and without mildew. 
 
 ## The rationale to map the business requirements to the Data Visualisations and ML tasks
 
-- List your business requirements and a rationale to map them to the Data Visualisations and ML tasks.
+Epics:
+Data collection and preparation
+Data visualization
+Model training, optimization and evaluation
+Dashboard planning, designing, and development and deployment
+API Development and deployment
+User stories:
+Data Collection and Preparation
+User Story: As a developer, I can source and acquire the data to create a reliable and well-prepared dataset for the project.
+Task: Download the dataset and extract the relevant data, save it in a new relevant folder structure.
+Data Visualization
+User Story: As a developer, I can generate informative visualizations to understand the data, providing valuable insights.
+
+Task: Choose appropriate visualization techniques, generate visualizations and save them.
+User Story: As a developer, I can integrate data visualizations into the dashboard for user-friendly data exploration.
+
+Task: Design the layout and implement interactive features.
+Model Training, Optimization, and Evaluation
+User Story: As a developer, I can find the optimal hyperparamaters for my model in a set range of parameters.
+
+Task: Find the optimal parameters using techniques such as Grid Search or Randomized Search.
+User Story: As a developer, I can train and fine-tune the machine learning model based on the optimal hyperparameters found.
+
+Task: Define model architecture and implement a function to build the model based on the found optimal hyperparameters.
+User Story: As a developer, I can evaluate my models performance using a variety of metrics.
+
+Task: Perform model evaluation using a Machine Learning library, visually represent the results and save the visualizations.
+User Story: As a user, I can access model evaluation results, helping me understand the model's performance.
+
+Task: Provide a user interface for accessing model evaluation reports.
+Dashboard Planning, Designing, and Development and Deployment
+User Story: As a developer, I can implement Streamlit features, making it interactive and user-friendly.
+
+Task: Develop and integrate interactive Streamlit features and functionalities into the dashboard.
+User Story: As a developer, I can deploy the Streamlit dashboard, ensuring it is accessible to users.
+
+Task: Deploy the streamlit app to Heroku and ensure the dashboard is accessible online.
+User Story: As a user, I can access and interact with the deployed Streamlit app, enabling me to navigate through the project, explore data visualizations, and make live predictions on the model.
+
+Task: Provide navigation options, interactive data exploration features and a page for making live predictions with a way to download sample images for making predictions.
+API Development and Deployment
+User Story: As a user, I can access the API in order to integrate the machine learning solution into my applications.
+
+Task: Develop an API and provide an endpoint for users to interact with the model.
+User Story: As a user, I can access information for usage of the API in order to learn how to use it.
+
+Task: Provide usage instructions along with example code on how to use the API inside the dashboard.
 
 ## ML Business Case
 
-- In the previous bullet, you potentially visualised an ML task to answer a business requirement. You should frame the business case using the method we covered in the course.
+We want an ML model to predict if the cheery leaf has powdery mildew based on the image dataset provided. The target variable is categorical and contains 2-classes. We consider a classification model. It is a supervised model, a 2-class, single-label, classification model which produces output: 0 (no powdery mildew) or 1 (powdery mildew)
+Our aim is to have an accuracy of at least 90%
+Our ideal outcome is to provide the company with a dependable solution to provide their algorithm with reliable data.
+An API will be required for the company to integrate the solution into their platform in an automated way. The images will be gathered from profile pictures and posts made by users.
+
 
 ## Dashboard Design
 
