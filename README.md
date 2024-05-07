@@ -4,36 +4,36 @@ An image classifier machine learning project for mildew detection on cherry leav
 
 ## Table of Contents
 
-Project Dataset
-Business Requirements
-Hypothesis and Validation
-The rationale to map the business requirements to the Data Visualizations and ML tasks
-Epics
-User Stories
-Data Collection and Preparation
-Data Visualization
-Model Training, Optimization, and Evaluation
-Dashboard Planning, Designing, and Development and Deployment
-API Development and Deployment
-ML Business Case
-Dashboard Design (Streamlit App User Interface)
-Page 1: Home
-Page 2: Project Summary
-Page 3: Data Visualization
-Page 4: Predict Gender
-Page 5: Hypothesis and Validation
-Page 6: ML Metrics
-Page 7: API
-Deployment
-Main Data Analysis & Machine Learning Libraries
-Run locally
-Credits
+1. [Project Dataset](#project-dataset)
+2. [Business Requirements](#business-requirements)
+3. [Hypothesis and Validation](#hypothesis-and-validation)
+4. [The rationale to map the business requirements to the Data Visualizations and ML tasks](#the-rationale-to-map-the-business-requirements-to-the-data-visualizations-and-ml-tasks)
+   - [Epics](#epics)
+   - [User Stories](#user-stories)
+      1. [Data Collection and Preparation](#data-collection-and-preparation)
+      2. [Data Visualization](#data-visualization)
+      3. [Model Training, Optimization, and Evaluation](#model-training-optimization-and-evaluation)
+      4. [Dashboard Planning, Designing, and Development and Deployment](#dashboard-planning-designing-and-development-and-deployment)
+      5. [Dashboard Development and Deployment](#dashboard-development-and-deployment)
+5. [ML Business Case](#ml-business-case)
+6. [Dashboard Design (Streamlit App User Interface)](#dashboard-design-streamlit-app-user-interface)
+   - [Page 1: Home](#page-1-home)
+   - [Page 2: Project Summary](#page-2-project-summary)
+   - [Page 3: Data Visualization](#page-3-data-visualization)
+   - [Page 4: Predict Gender](#page-4-predict-gender)
+   - [Page 5: Hypothesis and Validation](#page-5-hypothesis-and-validation)
+   - [Page 6: ML Metrics](#page-6-ml-metrics)
+   - [Page 7: Dashboard](#page-7-dashboard)
+7. [Deployment](#deployment)
+8. [Main Data Analysis & Machine Learning Libraries](#main-data-analysis--machine-learning-libraries)
+9. [Run locally](#run-locally)
+10. [Credits](#credits)
 
 ## Project Dataset
 
 Dataset used provided by Code Institute.
 
-I have not included the actual data in this repo, if you would like to inspect the dataset, please follow the steps in Run locally to download the dataset to your local machine.
+I have not included the actual data in this repo, if you would like to inspect the dataset, please follow the steps in [Run locally](#run-locally) to download the dataset to your local machine.
 
 ## Dataset Content
 
@@ -51,78 +51,143 @@ To save time in this process, the IT team suggested an ML system that detects in
 
 ## Hypothesis and validation
 
-Hypothesis: Powdery mildew can be detected using an average image study. 
+Hypothesis: Using a machine learning approach and image processing techniques, I hypothesize that it is feasible to develop a predictive model capable of accurately detecting powdery mildew in cherry leaves, based on features extracted from images.
 
 How to validate: Conducting an average image study of cherry leaves, with and without mildew. 
 
 ## The rationale to map the business requirements to the Data Visualisations and ML tasks
 
-Epics:
-Data collection and preparation
-Data visualization
-Model training, optimization and evaluation
-Dashboard planning, designing, and development and deployment
-API Development and deployment
-User stories:
-Data Collection and Preparation
-User Story: As a developer, I can source and acquire the data to create a reliable and well-prepared dataset for the project.
-Task: Download the dataset and extract the relevant data, save it in a new relevant folder structure.
-Data Visualization
-User Story: As a developer, I can generate informative visualizations to understand the data, providing valuable insights.
+### Epics:
 
-Task: Choose appropriate visualization techniques, generate visualizations and save them.
-User Story: As a developer, I can integrate data visualizations into the dashboard for user-friendly data exploration.
+1. Information Gathering and Data Collection: This epic focuses on gathering relevant information and collecting the cherry leaf image dataset required for the project.
+2. Data Visualization, Cleaning, and Preparation: This epic involves visualizing, cleaning, and preparing the dataset for model training, ensuring data quality and integrity.
+3. Model Training, Optimization, and Validation: This epic covers the design, training, optimization, and validation of a neural network model to accurately predict whether a cherry leaf is healthy or contains powdery mildew.
+4. Dashboard Planning, Designing, and Development: This epic encompasses the planning, designing, and development of an interactive dashboard interface for users to explore project findings and make live predictions.
+5. Dashboard Deployment and Release: This epic focuses on deploying the dashboard to a web hosting platform and releasing it for user access, ensuring accessibility and usability.
 
-Task: Design the layout and implement interactive features.
-Model Training, Optimization, and Evaluation
-User Story: As a developer, I can find the optimal hyperparamaters for my model in a set range of parameters.
+### User Stories:
 
-Task: Find the optimal parameters using techniques such as Grid Search or Randomized Search.
-User Story: As a developer, I can train and fine-tune the machine learning model based on the optimal hyperparameters found.
+Information Gathering and Data Collection
+1. User Story: As a developer, I can gather relevant information and collect the cherry leaf image dataset for the project.
+- Task: Obtain cherry leaf images from the provided Kaggle repository and ensure compliance with the non-disclosure agreement (NDA) for data sharing.
 
-Task: Define model architecture and implement a function to build the model based on the found optimal hyperparameters.
-User Story: As a developer, I can evaluate my models performance using a variety of metrics.
+Data Visualization, Cleaning, and Preparation
+1. User Story: As a developer, I can visualize and explore the dataset to understand its characteristics and identify patterns relevant to powdery mildew detection.
+- Task: Generate average images, variability images, and image montages for healthy and powdery mildew cherry leaves to fulfill Business Requirement 1.
+2. User Story: As a developer, I can clean and prepare the dataset for model training, addressing any missing values or outliers.
+- Task: Implement data cleaning techniques and resize images to a smaller shape (e.g., 100x100) to reduce model size and enable smoother GitHub pushes.
 
-Task: Perform model evaluation using a Machine Learning library, visually represent the results and save the visualizations.
-User Story: As a user, I can access model evaluation results, helping me understand the model's performance.
+Model Training, Optimization, and Validation
 
-Task: Provide a user interface for accessing model evaluation reports.
-Dashboard Planning, Designing, and Development and Deployment
-User Story: As a developer, I can implement Streamlit features, making it interactive and user-friendly.
+1. User Story: As a developer, I can design and train a neural network model to predict whether a cherry leaf is healthy or contains powdery mildew.
+- Task: Define the neural network architecture, train the model on the prepared dataset, and optimize hyperparameters to achieve a minimum accuracy of 97%.
+2. User Story: As a developer, I can validate the model's performance using appropriate metrics to ensure it meets the client's performance goal.
+- Task: Evaluate the trained model's performance using metrics such as accuracy, precision, recall, and F1-score, ensuring it meets the minimum accuracy requirement.
 
-Task: Develop and integrate interactive Streamlit features and functionalities into the dashboard.
-User Story: As a developer, I can deploy the Streamlit dashboard, ensuring it is accessible to users.
+Dashboard Planning, Designing, Development, and Deployment
 
-Task: Deploy the streamlit app to Heroku and ensure the dashboard is accessible online.
-User Story: As a user, I can access and interact with the deployed Streamlit app, enabling me to navigate through the project, explore data visualizations, and make live predictions on the model.
-
-Task: Provide navigation options, interactive data exploration features and a page for making live predictions with a way to download sample images for making predictions.
-API Development and Deployment
-User Story: As a user, I can access the API in order to integrate the machine learning solution into my applications.
-
-Task: Develop an API and provide an endpoint for users to interact with the model.
-User Story: As a user, I can access information for usage of the API in order to learn how to use it.
-
-Task: Provide usage instructions along with example code on how to use the API inside the dashboard.
+1. User Story: As a developer, I can plan and design an intuitive dashboard interface for users to explore project findings and make live predictions.
+- Task: Design the layout and navigation of the dashboard, incorporating features such as a project summary page, study findings page, live prediction interface, and technical performance page.
+2. User Story: As a developer, I can develop and deploy the dashboard to a web hosting platform, ensuring accessibility and usability.
+- Task: Develop the dashboard using suitable frameworks (e.g., Streamlit) and deploy it to a web hosting service (e.g., Heroku) for user access.
 
 ## ML Business Case
 
-We want an ML model to predict if the cheery leaf has powdery mildew based on the image dataset provided. The target variable is categorical and contains 2-classes. We consider a classification model. It is a supervised model, a 2-class, single-label, classification model which produces output: 0 (no powdery mildew) or 1 (powdery mildew)
-Our aim is to have an accuracy of at least 90%
-Our ideal outcome is to provide the company with a dependable solution to provide their algorithm with reliable data.
-An API will be required for the company to integrate the solution into their platform in an automated way. The images will be gathered from profile pictures and posts made by users.
+Farmy & Foods, a leading agriculture company, is facing challenges in detecting powdery mildew in cherry leaves across their cherry plantations. Currently, the process involves manual verification by employees, which is time-consuming and not scalable due to the large number of cherry trees spread across multiple farms. The company seeks an efficient solution to automate the detection process, ensuring the quality of their cherry products while optimizing resource utilization.
+
+Business Objectives:
+1. Efficiency Improvement: Reduce the time and effort required for detecting powdery mildew in cherry leaves, enabling faster decision-making and response to infections.
+2. Scalability: Develop a scalable solution that can handle the inspection of thousands of cherry trees spread across multiple farms, ensuring consistent and reliable detection of powdery mildew.
+3. Quality Assurance: Ensure the quality of cherry products by accurately identifying and treating trees infected with powdery mildew, thereby minimizing crop loss and maintaining customer satisfaction.
+
+Proposed Solution:
+Implement a machine learning (ML) system based on convolutional neural networks (CNNs) to automate the detection of powdery mildew in cherry leaves. By leveraging image processing techniques and deep learning algorithms, the proposed solution aims to analyze cherry leaf images and classify them as healthy or infected with powdery mildew with high accuracy and efficiency.
+
+Business Benefits:
+1. Time Savings: By automating the detection process, Farmy & Foods can significantly reduce the time spent on manual inspections, enabling employees to focus on other critical tasks and increasing overall operational efficiency.
+2. Cost Reduction: The implementation of an ML-based solution eliminates the need for manual labor-intensive inspections, leading to cost savings associated with labor, resources, and potential crop loss due to undetected infections.
+3. Scalability: The proposed solution can scale to handle the inspection of large-scale cherry plantations, allowing Farmy & Foods to maintain consistent quality standards across all farms and effectively manage their agricultural operations.
+4. Quality Assurance: By accurately detecting powdery mildew in cherry leaves, the ML system ensures the timely identification and treatment of infected trees, preserving the quality and integrity of cherry products and enhancing customer trust and satisfaction.
+
+Success Criteria:
+1. Accuracy: Achieve a minimum accuracy rate of 97% in classifying cherry leaves as healthy or infected with powdery mildew, ensuring reliable detection performance across different farm environments and conditions.
+2. Efficiency: Reduce the inspection time per cherry tree from 30 minutes to near-instantaneous detection using the ML system, allowing Farmy & Foods to streamline their agricultural operations and respond promptly to infections.
+3. Scalability: Deploy a scalable solution capable of handling the inspection of thousands of cherry trees across multiple farms, accommodating the company's growth and expansion plans without compromising detection accuracy or performance.
+
+Risk Mitigation:
+1. Data Privacy: Adhere to non-disclosure agreements (NDAs) and ethical guidelines when handling and processing sensitive data, ensuring the confidentiality and security of cherry leaf images and related information.
+2. Model Robustness: Conduct rigorous testing and validation of the ML model to ensure its robustness and reliability in detecting powdery mildew under various environmental conditions and image quality constraints.
+3. Deployment Challenges: Collaborate closely with IT and operational teams to address any technical challenges or infrastructure requirements during the deployment of the ML system, ensuring seamless integration with existing workflows and systems.
+
+Conclusion:
+By leveraging machine learning technology to automate the detection of powdery mildew in cherry leaves, Farmy & Foods can achieve significant improvements in operational efficiency, cost savings, and product quality assurance. The proposed ML solution not only addresses the immediate challenge of powdery mildew detection but also lays the foundation for future innovations and applications in agricultural pest and disease management, positioning Farmy & Foods as a leader in sustainable and technology-driven agriculture.
 
 
-## Dashboard Design
+## Dashboard design (Streamlit App User Interface)
 
-- List all dashboard pages and their content, either blocks of information or widgets, like buttons, checkboxes, images, or any other items, that your dashboard library supports.
-- Finally, during the project development, you may revisit your dashboard plan to update a given feature (for example, at the beginning of the project, you were confident you would use a given plot to display an insight, but later, you chose another plot type).
+### Page 1: Home/ Project summary
+This page provides an overview of the project, including a summary of the dataset used and the client's requirements.
+Key components:
+-	Project title and description.
+-   Dataset summary statistics, such as the number of images, classes (healthy vs. powdery mildew), and data distribution.
+-   Client's requirements and project objectives.
+-	Link to GitHub profile
+-	Link to GitHub repo
+
+### Page 2: Findings
+This page presents the findings related to the study on visually differentiating healthy cherry leaves from those containing powdery mildew.
+Key components:
+- Visualizations comparing healthy and infected cherry leaves, such as histograms or scatter plots highlighting key features.
+Insights drawn from the visual analysis, such as distinguishing characteristics between healthy and infected leaves.
+
+### Page 3: Prediction Interface
+This page allows users to upload cherry leaf images for live prediction of their health status.
+Key components:
+- A file uploader widget enabling users to upload multiple images.
+- For each uploaded image, display:
+- The uploaded image.
+- Prediction statement indicating whether the leaf is healthy or infected with powdery mildew, along with the probability score.
+- A table displaying the image name, prediction results, and probability scores.
+- Download button to download the prediction results table.
+
+- Provide a download link for images of faces for live prediction
+- Provide a file uploader and predict button to interact with the model
+- Provide a download button for a report of the predictions
+
+### Page 4: Project Hypothesis and Validation
+This page outlines the project hypothesis and how it was validated throughout the project lifecycle.
+Key components:
+- Project hypothesis statement.
+- Description of the validation approach, including data collection, model training, and evaluation methods.
+- Summary of validation results and their alignment with the project hypothesis.
+
+### Page 5: Model Performance 
+This page provides technical details on the performance of the ML model developed for cherry leaf health prediction.
+Key components:
+- Model architecture overview, including the types of layers and parameters used.
+- Performance metrics such as accuracy, precision, recall, and F1-score.
+- Visualizations of model performance, such as confusion matrices or ROC curves.
+
+### Page 6: ML Metrics
+- Provide metrics from model training presented visually
+- Provide metrics from model evaluation presented visually
+- Provide True Positives(TP), True Negatives(TN), False Positives(FN) and False Negatives(FN) from model evaluation presented visually
+- Provide scikit-learns classification report from model evalutation
 
 ## Unfixed Bugs
 
 - You will need to mention unfixed bugs and why they were unfixed. This section should include shortcomings of the frameworks or technologies used. Although time can be a significant variable for consideration, paucity of time and difficulty understanding implementation is not a valid reason to leave bugs unfixed.
 
 ## Deployment
+
+This project was deployed to [Heroku](https://heroku.com/) using the following steps:
+1.  Log in to Heroku and create an App
+2.  At the Deploy tab, select GitHub as the deployment method.
+3.  Select your repository name and click Search. Once it is found, click Connect.
+4.  Select the branch you want to deploy, then click Deploy Branch.
+5.  The deployment process should happen smoothly if all deployment files are fully functional. Click now the button Open App on the top of the page to access your App.
+6.  If the slug size is too large then specify dependencies unnecessary for deployment by specifying your 'requirements.txt' and specify unnecessary files in a '.slugignore' in the root directory.
+
 
 ### Heroku
 
@@ -139,18 +204,74 @@ An API will be required for the company to integrate the solution into their pla
 
 ## Main Data Analysis and Machine Learning Libraries
 
-- Here, you should list the libraries used in the project and provide an example(s) of how you used these libraries.
+__Main Data analysis libraries used__:
+
+- Numpy
+	- For performing calculations on large amounts of data efficiently, mainly pixel data in this case
+	- Normalizing pixel data
+	- Calculating means and standard deviations
+	- Base for other data analysis and ML libraries
+- Pandas
+	- Mainly for pandas DataFrame's for easy management of large data (sampling, shuffling, concatenation etc.)
+- Matplotlib & Seaborn
+	- For plotting and visualization of data
+	- Showing images from pixel data
+	- Metric plots & Histograms
+
+__Main Machine Learning libraries used:__
+
+- TensorFlow & Keras
+	- Image augmentation
+	- Model loading
+	- Defining model architecture
+	- Training model
+	- One-hot encoding
+	- tensorflow.data.Datset API
+- Scikit Learn
+	- Hyperparameter optimization using GridSearchCV
+	- Generating confusion matrixes & classification reports
+- OpenCV
+	- Reading images pixel data as NumPy arrays
+	- Resizing images
+- Scikeras
+	- For performing GridSearchCV on Keras models which is not compatible by default with scikit-learn. (KerasClassifier)
+
+## Run locally
+
+This repo covers the entire process of creating a ML model. From collecting and processing the data, to conducting hyperparameter optimization, data augmentation, defining and training the model on the data.
+
+__To use this repo, follow these steps:__
+
+1. Fork or clone this repository
+2. Install dependencies by running:
+	```bash
+	pip install -r "requirements-dev.txt"
+	```
+3. Register an account with [Kaggle](https://www.kaggle.com/) and create a new API token, download the kaggle.json and place it in the projects root directory.
+4. Run the notebooks in the jupyter_notebooks folder in the specified order.
+	- __DataCollection.ipynb:__ Downloads the dataset and extracts specified number of images.
+	- __DataVisualization.ipynb:__ Conducts studies on the data and saves insightful plots.
+	- __Model.ipynb:__ Prepares data, performs data augmentation and hyperparameter optimization, defines model architecture, trains, evaluates and saves a ML model.
+5. Start the web app by running:
+	```bash
+	streamlit run Home.py
+	```
+___If you encounter an error while importing opencv-python(cv2), run the following commands:___
+```bash
+sudo apt-get update
+sudo apt-get install -y libgl1-mesa-dev
+```
 
 ## Credits
 
-- In this section, you need to reference where you got your content, media and from where you got extra help. It is common practice to use code from other repositories and tutorials. However, it is necessary to be very specific about these sources to avoid plagiarism.
-- You can break the credits section up into Content and Media, depending on what you have included in your project.
-
 ### Content
 
-- The text for the Home page was taken from Wikipedia Article A.
-- Instructions on how to implement form validation on the Sign-Up page were taken from [Specific YouTube Tutorial](https://www.youtube.com/).
-- The icons in the footer were taken from [Font Awesome](https://fontawesome.com/).
+- [Churnometer repo by Code Institute](https://github.com/Code-Institute-Solutions/churnometer#readme): For the Readme template/structure.
+
+- [Gender predictor](https://github.com/linx02/genderpredictor/tree/main): For the Readme template/structure.
+
+- [Streamlit documentation](https://docs.streamlit.io/): For getting the web app up and running.
+
 
 ### Media
 
