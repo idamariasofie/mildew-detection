@@ -10,24 +10,25 @@ An image classifier machine learning project for mildew detection on cherry leav
 4. [The rationale to map the business requirements to the Data Visualizations and ML tasks](#the-rationale-to-map-the-business-requirements-to-the-data-visualizations-and-ml-tasks)
    - [Epics](#epics)
    - [User Stories](#user-stories)
-      1. [Data Collection and Preparation](#data-collection-and-preparation)
-      2. [Data Visualization](#data-visualization)
-      3. [Model Training, Optimization, and Evaluation](#model-training-optimization-and-evaluation)
-      4. [Dashboard Planning, Designing, and Development and Deployment](#dashboard-planning-designing-and-development-and-deployment)
-      5. [Dashboard Development and Deployment](#dashboard-development-and-deployment)
+      1. [Information Gathering and Data Collection](#information-gathering-and-data-collection)
+      2. [Data Visualization, Cleaning, and Preparation](#data-visualization-cleaning-and-preparation)
+      3. [Model Training, Optimization, and Validation](#model-training-optimization-and-validation)
+      4. [Dashboard Planning, Designing, and Development](#dashboard-planning-designing-and-development)
+      5. [Dashboard Deployment and Release](#dashboard-development-and-release)
 5. [ML Business Case](#ml-business-case)
 6. [Dashboard Design (Streamlit App User Interface)](#dashboard-design-streamlit-app-user-interface)
-   - [Page 1: Home](#page-1-home)
-   - [Page 2: Project Summary](#page-2-project-summary)
-   - [Page 3: Data Visualization](#page-3-data-visualization)
-   - [Page 4: Predict Gender](#page-4-predict-gender)
-   - [Page 5: Hypothesis and Validation](#page-5-hypothesis-and-validation)
+   - [Page 1: Home/ Project Summary](#page-1-home-project-summary)
+   - [Page 2: Findings](#page-2-findings)
+   - [Page 3: Prediction Interface](#page-3-prediction-interface)
+   - [Page 4: Project Hypothesis and Validation](#page-4-project-hypothesis-and-validation)
+   - [Page 5: Model Performance ](#page-5-model-performance)
    - [Page 6: ML Metrics](#page-6-ml-metrics)
-   - [Page 7: Dashboard](#page-7-dashboard)
-7. [Deployment](#deployment)
-8. [Main Data Analysis & Machine Learning Libraries](#main-data-analysis--machine-learning-libraries)
-9. [Run locally](#run-locally)
-10. [Credits](#credits)
+7. [Unfixed Bugs](#unfixed-bugs)
+8. [Deployment](#deployment)
+9. [Main Data Analysis & Machine Learning Libraries](#main-data-analysis--machine-learning-libraries)
+10. [Run locally](#run-locally)
+11. [Credits](#credits)
+12. [Acknowledgements](#acknowledgements)
 
 ## Project Dataset
 
@@ -59,23 +60,24 @@ How to validate: Conducting an average image study of cherry leaves, with and wi
 
 ### Epics:
 
-1. Information Gathering and Data Collection: This epic focuses on gathering relevant information and collecting the cherry leaf image dataset required for the project.
-2. Data Visualization, Cleaning, and Preparation: This epic involves visualizing, cleaning, and preparing the dataset for model training, ensuring data quality and integrity.
-3. Model Training, Optimization, and Validation: This epic covers the design, training, optimization, and validation of a neural network model to accurately predict whether a cherry leaf is healthy or contains powdery mildew.
-4. Dashboard Planning, Designing, and Development: This epic encompasses the planning, designing, and development of an interactive dashboard interface for users to explore project findings and make live predictions.
-5. Dashboard Deployment and Release: This epic focuses on deploying the dashboard to a web hosting platform and releasing it for user access, ensuring accessibility and usability.
+1. Information Gathering and Data Collection: Focuses on gathering relevant information and collecting the cherry leaf image dataset required for the project.
+2. Data Visualization, Cleaning, and Preparation: Involves visualizing, cleaning, and preparing the dataset for model training, ensuring data quality and integrity.
+3. Model Training, Optimization, and Validation: Covers the design, training, optimization, and validation of a neural network model to predict cherry leaf health status.
+4. Dashboard Planning, Designing, and Development: Encompasses the planning, designing, and development of an interactive dashboard interface for users to explore project findings and make live predictions.
+5. Dashboard Deployment and Release: Focuses on deploying the dashboard to a web hosting platform and releasing it for user access, ensuring accessibility and usability.
+
 
 ### User Stories:
 
 Information Gathering and Data Collection
 1. User Story: As a developer, I can gather relevant information and collect the cherry leaf image dataset for the project.
-- Task: Obtain cherry leaf images from the provided Kaggle repository and ensure compliance with the non-disclosure agreement (NDA) for data sharing.
+- Task: Obtain cherry leaf images from the provided Kaggle repository and ensure compliance with the non-disclosure agreement (NDA) for data sharing and save the images in a new relevant folder structure.
 
 Data Visualization, Cleaning, and Preparation
 1. User Story: As a developer, I can visualize and explore the dataset to understand its characteristics and identify patterns relevant to powdery mildew detection.
-- Task: Generate average images, variability images, and image montages for healthy and powdery mildew cherry leaves to fulfill Business Requirement 1.
+- Task: Generate average images, variability images, and image montages for healthy and powdery mildew cherry leaves to fulfill Business Requirement 1. 
 2. User Story: As a developer, I can clean and prepare the dataset for model training, addressing any missing values or outliers.
-- Task: Implement data cleaning techniques and resize images to a smaller shape (e.g., 100x100) to reduce model size and enable smoother GitHub pushes.
+- Task: Implement data cleaning techniques and resize images to a smaller shape to reduce model size and enable smoother GitHub pushes.
 
 Model Training, Optimization, and Validation
 
@@ -84,12 +86,18 @@ Model Training, Optimization, and Validation
 2. User Story: As a developer, I can validate the model's performance using appropriate metrics to ensure it meets the client's performance goal.
 - Task: Evaluate the trained model's performance using metrics such as accuracy, precision, recall, and F1-score, ensuring it meets the minimum accuracy requirement.
 
-Dashboard Planning, Designing, Development, and Deployment
+Dashboard Planning, Designing, and Development:
 
 1. User Story: As a developer, I can plan and design an intuitive dashboard interface for users to explore project findings and make live predictions.
-- Task: Design the layout and navigation of the dashboard, incorporating features such as a project summary page, study findings page, live prediction interface, and technical performance page.
-2. User Story: As a developer, I can develop and deploy the dashboard to a web hosting platform, ensuring accessibility and usability.
-- Task: Develop the dashboard using suitable frameworks (e.g., Streamlit) and deploy it to a web hosting service (e.g., Heroku) for user access.
+- Task: Design the dashboard layout and navigation, including features like project summary, study findings, live prediction, and technical performance pages.
+2. User Story: As a developer, I can develop the dashboard to ensure accessibility and usability.
+- Task: Develop the dashboard using Streamlit, focusing on creating an intuitive user interface and incorporating all required features.
+
+Dashboard Deployment and Release
+
+1. User Story: As a developer, I can deploy the dashboard to a web hosting platform, ensuring accessibility and usability for users.
+- Task: Deploy the developed dashboard to a web hosting service (e.g., Heroku) for user access.
+
 
 ## ML Business Case
 
@@ -122,10 +130,9 @@ Risk Mitigation:
 Conclusion:
 By leveraging machine learning technology to automate the detection of powdery mildew in cherry leaves, Farmy & Foods can achieve significant improvements in operational efficiency, cost savings, and product quality assurance. The proposed ML solution not only addresses the immediate challenge of powdery mildew detection but also lays the foundation for future innovations and applications in agricultural pest and disease management, positioning Farmy & Foods as a leader in sustainable and technology-driven agriculture.
 
-
 ## Dashboard design (Streamlit App User Interface)
 
-### Page 1: Home/ Project summary
+### Page 1: Home/ Project Summary
 This page provides an overview of the project, including a summary of the dataset used and the client's requirements.
 Key components:
 -	Project title and description.
@@ -278,6 +285,6 @@ sudo apt-get install -y libgl1-mesa-dev
 - The photos used on the home and sign-up page are from This Open-Source site.
 - The images used for the gallery page were taken from this other open-source site.
 
-## Acknowledgements (optional)
+## Acknowledgements
 
-- Thank the people who provided support throughout this project.
+- 
