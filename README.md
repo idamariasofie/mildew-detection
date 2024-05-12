@@ -279,7 +279,6 @@ sudo apt-get install -y libgl1-mesa-dev
 
 - [Streamlit documentation](https://docs.streamlit.io/): For getting the web app up and running.
 
-
 ### Media
 
 - The photos used on the home and sign-up page are from This Open-Source site.
