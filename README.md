@@ -183,7 +183,16 @@ Key components:
 
 ## Unfixed Bugs
 
-- You will need to mention unfixed bugs and why they were unfixed. This section should include shortcomings of the frameworks or technologies used. Although time can be a significant variable for consideration, paucity of time and difficulty understanding implementation is not a valid reason to leave bugs unfixed.
+### Collect data set from Kaggle
+
+- Initially, I attempted to collect the data set from Kaggle using a path specified in my code, following the structure outlined in Walkthrough 1 project. However, during the download process, I consistently encountered a 403 - forbidden error. In an effort to resolve this issue, I undertook the following steps:
+
+Path Verification: I double-checked to ensure that the path to the Kaggle data set was accurately specified within my code.
+
+Token Regeneration: Suspecting that the issue might be related to authentication, I invalidated my existing Kaggle token and generated a new one, which I then integrated into my IDE.
+
+Despite these troubleshooting efforts, the problem persisted, and the 403 error persisted. Faced with this obstacle, I made the decision to download the data set directly and import it into my IDE. While this course of action necessitated alterations to the code and structure of my DataCollection workbook, I remained steadfast in my determination to progress with the project.
+
 
 ## Deployment
 
@@ -270,6 +279,7 @@ sudo apt-get install -y libgl1-mesa-dev
 ```
 
 ## Credits
+
 
 ### Content
 
