@@ -289,6 +289,9 @@ sudo apt-get install -y libgl1-mesa-dev
 
 - [Streamlit documentation](https://docs.streamlit.io/): For getting the web app up and running.
 
+- [Solve error with using OpenCV](https://stackoverflow.com/questions/55313610/importerror-libgl-so-1-cannot-open-shared-object-file-no-such-file-or-directo)
+
+
 ### Media
 
 - The photos used on the home and sign-up page are from This Open-Source site.
