@@ -65,3 +65,5 @@ validators==0.28.1
 watchdog==4.0.0
 Werkzeug==3.0.2
 wrapt==1.12.1
+mesa==21.3.4
+glew==2.1.0
