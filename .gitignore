@@ -7,4 +7,9 @@ __pycache__/
 node_modules/
 .github/
 cloudinary_python.txt
+inputs/datasets
+train_dataframe.csv
+validation_dataframe.csv
+test_dataframe.csv
+jupyter_notebooks
 kaggle.json
