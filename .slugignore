@@ -1,4 +1,12 @@
 jupyter_notebooks/
 .gitpod.yml
 .gitpod.Dockerfile
+inputs/datasets/test/healthy*
+inputs/datasets/test/powdery_mildew*
+inputs/datasets/train/healthy*
+inputs/datasets/train/powdery_mildew*
+jupyter_notebooks/test_dataframe.csv*
+jupyter_notebooks/train_dataframe.csv*
+jupyter_notebooks/validation_dataframe.csv*
+app_pages/__pycache__/*
 README.md
