@@ -5,6 +5,8 @@ inputs/datasets/test/healthy*
 inputs/datasets/test/powdery_mildew*
 inputs/datasets/train/healthy*
 inputs/datasets/train/powdery_mildew*
+outputs/resized_datasets/train*
+outputs/resized_datasets/test*
 jupyter_notebooks/test_dataframe.csv*
 jupyter_notebooks/train_dataframe.csv*
 jupyter_notebooks/validation_dataframe.csv*
