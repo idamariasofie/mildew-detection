@@ -16,8 +16,8 @@ def page_hypothesis_validation_body():
 
     st.header("Findings")
     st.markdown("""
-    - **Image Montage**: Typically, a parasitized cell has purplish marks across it.
-    - **Average Image Study**: Did not reveal any clear pattern to differentiate one from another.
+    - **Image Montage**: Notably, leaves with powdery mildew often exhibit characteristic features such as discoloration or irregularities.
+    - **Average Image Study**: Despite comprehensive efforts, no discernible patterns were identified to effectively differentiate between healthy leaves and those infected with powdery mildew.
     """)
 
 # Ensure the function is called when the script is run directly
