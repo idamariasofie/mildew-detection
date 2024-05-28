@@ -1,0 +1,37 @@
+import streamlit as st
+import matplotlib.pyplot as plt
+import pandas as pd
+
+# Define or import the load_test_evaluation function if necessary
+# from utils import load_test_evaluation
+
+def page_ml_metrics_body():
+    st.title("ML Metrics")
+    st.write("This page displays the ML metrics.")
+
+    version = 'v4'
+
+    st.write("### Train, Validation, and Test Set: Labels Frequencies")
+
+    labels_distribution = plt.imread(f"outputs/{version}/labels_distribution.png")
+    st.image(labels_distribution, caption='Labels Distribution on Train, Validation, and Test Sets')
+    st.write("---")
+
+    st.write("### Model History")
+    col1, col2 = st.beta_columns(2)
+    with col1: 
+        model_acc = plt.imread(f"outputs/{version}/model_training_acc.png")
+        st.image(model_acc, caption='Model Training Accuracy')
+    with col2:
+        model_loss = plt.imread(f"outputs/{version}/model_training_losses.png")
+        st.image(model_loss, caption='Model Training Losses')
+    st.write("---")
+
+    st.write("### Generalized Performance on Test Set")
+    # Replace load_test_evaluation with the appropriate function or data loading process
+    # st.dataframe(pd.DataFrame(load_test_evaluation(version), index=['Loss', 'Accuracy']))
+    st.write("Add code to display test set evaluation metrics here.")
+
+# Ensure the function is called when the script is run directly
+if __name__ == "__main__":
+    page_ml_metrics_body()
