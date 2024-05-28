@@ -1,6 +1,7 @@
 import streamlit as st
 import matplotlib.pyplot as plt
 import pandas as pd
+from src.machine_learning.evaluate_clf import load_test_evaluation
 
 # Define or import the load_test_evaluation function if necessary
 # from utils import load_test_evaluation
@@ -27,10 +28,8 @@ def page_ml_metrics_body():
         st.image(model_loss, caption='Model Training Losses')
     st.write("---")
 
-    st.write("### Generalized Performance on Test Set")
-    # Replace load_test_evaluation with the appropriate function or data loading process
-    # st.dataframe(pd.DataFrame(load_test_evaluation(version), index=['Loss', 'Accuracy']))
-    st.write("Add code to display test set evaluation metrics here.")
+    st.write("### Generalised Performance on Test Set")
+    st.dataframe(pd.DataFrame(load_test_evaluation(), index=['Loss', 'Accuracy']))
 
 # Ensure the function is called when the script is run directly
 if __name__ == "__main__":
