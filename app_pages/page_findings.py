@@ -13,8 +13,8 @@ def page_findings_body():
 
     # Checkbox for Difference between average and variability image
     if st.checkbox("Leaf Patterns: Average vs Variability"):
-        avg_healthy = plt.imread("/workspace/mildew-detection/avg_var_healthy.png")
-        avg_powdery = plt.imread("/workspace/mildew-detection/avg_var_powdery_mildew.png")
+        avg_healthy = plt.imread("/workspace/mildew-detection/outputs/v1/avg_var_healthy.png")
+        avg_powdery = plt.imread("/workspace/mildew-detection/outputs/v1/avg_var_powdery_mildew.png")
         st.warning("Our exploration of average and variability images revealed intriguing insights. While no distinct patterns emerged, we observed subtle differences in color pigment.")
         st.image(avg_healthy, caption='Healthy Leaf - Average and Variability')
         st.image(avg_powdery, caption='Powdery Mildew Leaf - Average and Variability')
@@ -22,7 +22,7 @@ def page_findings_body():
 
     # Checkbox for Differences between average powdery mildew and average healthy leaf
     if st.checkbox("Analyzing Leaf Traits: Average Powdery Mildew vs Average Healthy Leaf"):
-        avg_difference = plt.imread("/workspace/mildew-detection/avg_diff.png")
+        avg_difference = plt.imread("/workspace/mildew-detection/outputs/avg_diff.png")
         st.warning("Our analysis of average images highlighted subtle differences, yet identifying a clear differentiation proved to be challenging.")
         st.image(avg_difference, caption='Difference between Average Images')
         st.write("---")
@@ -30,7 +30,7 @@ def page_findings_body():
     # Checkbox for Image Montage
     if st.checkbox("Exploring Cherry Leaf Diversity"):
         st.write("* To refresh the montage, click on the 'Create Montage' button")
-        data_dir = 'inputs/datasets'
+        data_dir = 'inputs/datasets/cherry-leaves'
         labels = os.listdir(data_dir + '/validation')
         label_to_display = st.selectbox(label="Select label", options=labels, index=0)
         
