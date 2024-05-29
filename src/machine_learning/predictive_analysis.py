@@ -38,11 +38,16 @@ def resize_input_image(img):
     """
     Reshape image to average image size
     """
-    image_shape = load_pkl_file(file_path="/workspace/mildew-detection/outputs/image_shape.pkl")
-    img_resized = img.resize((image_shape[1], image_shape[0]), Image.LANCZOS)
-    my_image = np.expand_dims(img_resized, axis=0)/255
+    # Assuming the model expects input images of size (100, 100)
+    new_size = (100, 100)
+    img_resized = img.resize(new_size, Image.LANCZOS)
+    my_image = np.expand_dims(img_resized, axis=0) / 255
+
+    # Print the shape of the resized image
+    print("Shape of resized image:", my_image.shape)
 
     return my_image
+
 
 def load_model_and_predict(my_image):
     """
@@ -50,6 +55,9 @@ def load_model_and_predict(my_image):
     """
 
     model = load_model("/workspace/mildew-detection/outputs/trained_model.h5")
+
+    # Print the shape of the input image
+    print("Shape of input image:", my_image.shape)
 
     pred_proba = model.predict(my_image)[0, 0]
 
