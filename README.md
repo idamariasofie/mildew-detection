@@ -185,6 +185,9 @@ Token Regeneration: Suspecting that the issue might be related to authentication
 
 Despite these troubleshooting efforts, the problem persisted, and the 403 error persisted. Faced with this obstacle, I made the decision to download the data set directly and import it into my IDE. While this course of action necessitated alterations to the code and structure of my DataCollection workbook, I remained steadfast in my determination to progress with the project.
 
+### Install OpenCV
+
+- During installing OpenCV I keept on getting the same error over and over (libGL.so.1: cannot open shared object file: No such file or directory) After some research I found out that I could instead install OpenCV - headless to solve the error. 
 
 ## Deployment
 
@@ -213,31 +216,31 @@ This project was deployed to [Heroku](https://heroku.com/) using the following s
 ## Main Data Analysis and Machine Learning Libraries
 
 - Numpy:
-- For efficient calculations on large datasets, particularly pixel data.
-- Normalizing pixel data.
-- Calculating means and standard deviations.
-- Serving as a foundation for other data analysis and machine learning libraries.
+For efficient calculations on large datasets, particularly pixel data.
+Normalizing pixel data.
+Calculating means and standard deviations.
+Serving as a foundation for other data analysis and machine learning libraries.
 
 - Pandas:
-- Utilized mainly for managing data with pandas DataFrames. 
+Utilized mainly for managing data with pandas DataFrames. 
 
 - Matplotlib & Seaborn:
-- Used for data visualization, including plotting and displaying images from pixel data.
-- Generating metric plots and histograms.
+Used for data visualization, including plotting and displaying images from pixel data.
+Generating metric plots and histograms.
 
 - Main Machine Learning libraries used:
 
 - TensorFlow & Keras:
-- Employed for image augmentation, model loading, defining architecture, and training models.
+Employed for image augmentation, model loading, defining architecture, and training models.
 
 - Scikit Learn:
-- Utilized for hyperparameter optimization through GridSearchCV.
+Utilized for hyperparameter optimization through GridSearchCV.
 
 - OpenCV:
-- Used for image resizing.
+Used for image resizing.
 
 - Scikeras:
-- Enabled GridSearchCV functionality on Keras models, addressing compatibility issues with scikit-learn.
+Enabled GridSearchCV functionality on Keras models, addressing compatibility issues with scikit-learn.
 
 ## Run locally
 
