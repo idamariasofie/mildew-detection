@@ -22,7 +22,7 @@ def page_findings_body():
 
     # Checkbox for Differences between average powdery mildew and average healthy leaf
     if st.checkbox("Analyzing Leaf Traits: Average Powdery Mildew vs Average Healthy Leaf"):
-        avg_difference = plt.imread("/workspace/mildew-detection/outputs/avg_diff.png")
+        avg_difference = plt.imread("outputs/avg_diff.png")
         st.warning("Our analysis of average images highlighted subtle differences, yet identifying a clear differentiation proved to be challenging.")
         st.image(avg_difference, caption='Difference between Average Images')
         st.write("---")
