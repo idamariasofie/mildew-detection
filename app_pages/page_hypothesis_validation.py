@@ -5,13 +5,14 @@ def page_hypothesis_validation_body():
 
     st.header("Hypothesis")
     st.markdown("""
-    - **Hypothesis**: Using a machine learning approach and image processing techniques, it is hypothesized that it is feasible to develop a predictive model capable of accurately detecting powdery mildew in cherry leaves, based on features extracted from images.
+    - **Hypothesis**: Using a machine learning approach and image processing techniques, I hypothesize that it is feasible to develop a predictive model capable of accurately detecting powdery mildew in cherry leaves, based on features extracted from images.
     """)
 
     st.header("Validation Process")
     st.markdown("""
-    - **Study Design**: Conducting an average image study of cherry leaves, with and without mildew.
+    - **The hypothesis was valid by**: Conducting an average image study of cherry leaves, with and without mildew.
     - **Image Analysis**: Analyzing average images, variability images, and differences between averages to identify patterns.
+    - **Model Development and Evaluation**: Developing and evaluating a CNN model for powdery mildew detection, which formed a crucial part of the solution.
     """)
 
     st.header("Findings")

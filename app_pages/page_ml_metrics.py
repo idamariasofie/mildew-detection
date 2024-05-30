@@ -10,8 +10,6 @@ def page_ml_metrics_body():
     st.title("ML Metrics")
     st.write("This page displays the ML metrics.")
 
-    version = 'v4'
-
     st.write("### Train, Validation, and Test Set: Labels Frequencies")
 
     labels_distribution = plt.imread("outputs/v5/datasets_distribution.png")
@@ -29,7 +27,9 @@ def page_ml_metrics_body():
     st.write("---")
 
     st.write("### Generalised Performance on Test Set")
-    st.dataframe(pd.DataFrame(load_test_evaluation(), index=['Loss', 'Accuracy']))
+    test_loss, test_accuracy = load_test_evaluation()
+    st.write("Test Loss:", test_loss)
+    st.write("Test Accuracy:", test_accuracy)
 
 # Ensure the function is called when the script is run directly
 if __name__ == "__main__":

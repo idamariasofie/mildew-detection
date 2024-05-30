@@ -1,4 +1,3 @@
-# app_pages/multipage.py
 import streamlit as st
 
 class MultiPage:

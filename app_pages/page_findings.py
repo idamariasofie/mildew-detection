@@ -8,28 +8,27 @@ from matplotlib.image import imread
 def page_findings_body():
     st.title("Insights & Discoveries")
     st.write("Explore the insightful findings from our project.")
+    st.info('This page aims to answer business requirement 1: "The client is interested in conducting a study to visually differentiate a cherry leaf that is healthy from one that contains powdery mildew."')
 
-    st.info("Exploring the Complexities of Cherry Leaf Structures")
-
-    # Checkbox for Difference between average and variability image
-    if st.checkbox("Leaf Patterns: Average vs Variability"):
+    # Checkbox for Leaf Patterns: Average vs Variability
+    if st.checkbox("Compare Leaf Patterns"):
         avg_healthy = plt.imread("outputs/v1/avg_var_healthy.png")
         avg_powdery = plt.imread("outputs/v1/avg_var_powdery_mildew.png")
-        st.warning("Our exploration of average and variability images revealed intriguing insights. While no distinct patterns emerged, we observed subtle differences in color pigment.")
+        st.warning("Our exploration of average and variability images revealed subtle differences in color pigment.")
         st.image(avg_healthy, caption='Healthy Leaf - Average and Variability')
         st.image(avg_powdery, caption='Powdery Mildew Leaf - Average and Variability')
         st.write("---")
 
-    # Checkbox for Differences between average powdery mildew and average healthy leaf
-    if st.checkbox("Analyzing Leaf Traits: Average Powdery Mildew vs Average Healthy Leaf"):
+    # Checkbox for Analyzing Leaf Traits: Average Powdery Mildew vs Average Healthy Leaf
+    if st.checkbox("Compare Leaf Traits"):
         avg_difference = plt.imread("outputs/avg_diff.png")
-        st.warning("Our analysis of average images highlighted subtle differences, yet identifying a clear differentiation proved to be challenging.")
+        st.warning("Our analysis of average images highlighted subtle differences.")
         st.image(avg_difference, caption='Difference between Average Images')
         st.write("---")
 
-    # Checkbox for Image Montage
-    if st.checkbox("Exploring Cherry Leaf Diversity"):
-        st.write("* To refresh the montage, click on the 'Create Montage' button")
+    # Checkbox for Exploring Cherry Leaf Diversity
+    if st.checkbox("Explore Cherry Leaf Diversity"):
+        st.write("* Select a label and click 'Create Montage' to generate a visual representation.")
         data_dir = 'inputs/datasets/cherry-leaves'
         labels = os.listdir(data_dir + '/validation')
         label_to_display = st.selectbox(label="Select label", options=labels, index=0)

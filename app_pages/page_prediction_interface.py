@@ -13,35 +13,35 @@ from src.machine_learning.predictive_analysis import (
 def page_prediction_interface_body():
     st.title("Prediction Interface")
     st.write("Explore the prediction capabilities of the model.")
-    st.info(
-        f"The goal is to predict if a cherry leaf is healthy or contains powdery mildew."
-    )
+    st.info('This page aims to answer business requirement 2: "The client is interested in predicting if a cherry leaf is healthy or contains powdery mildew."')
 
     st.write(
-        f"You can upload images of cherry leaves to make predictions. "
-        f"Feel free to test the model with your own images."
+        "You can upload images of cherry leaves to make predictions. "
+        "Feel free to test the model with your own images."
     )
 
     st.write("---")
 
     images_buffer = st.file_uploader('Upload cherry leaf images. You may select more than one.',
-                                     type=['png', 'jpeg', 'jpg'],accept_multiple_files=True)
+                                     type=['png', 'jpeg', 'jpg'], accept_multiple_files=True)
 
     if images_buffer is not None:
         df_report = pd.DataFrame([])
         for image in images_buffer:
+            try:
+                img_pil = Image.open(image)
+                st.info(f"Cherry Leaf Image: **{image.name}**")
+                img_array = np.array(img_pil)
+                st.image(img_pil, caption=f"Image Size: {img_array.shape[1]}px width x {img_array.shape[0]}px height")
 
-            img_pil = Image.open(image)
-            st.info(f"Cherry Leaf Image: **{image.name}**")
-            img_array = np.array(img_pil)
-            st.image(img_pil, caption=f"Image Size: {img_array.shape[1]}px width x {img_array.shape[0]}px height")
+                resized_img = resize_input_image(img=img_pil)
+                pred_proba, pred_class = load_model_and_predict(resized_img)
+                plot_predictions_probabilities(pred_proba, pred_class)
 
-            resized_img = resize_input_image(img=img_pil)
-            pred_proba, pred_class = load_model_and_predict(resized_img)
-            plot_predictions_probabilities(pred_proba, pred_class)
-
-            df_report = df_report.append({"Name": image.name, 'Prediction': pred_class},
-                                         ignore_index=True)
+                df_report = df_report.append({"Name": image.name, 'Prediction': pred_class},
+                                             ignore_index=True)
+            except Exception as e:
+                st.error(f"Error processing image '{image.name}': {e}")
 
         if not df_report.empty:
             st.success("Prediction Report")
