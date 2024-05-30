@@ -23,27 +23,25 @@ An image classifier machine learning project for mildew detection on cherry leav
    - [Page 4: Project Hypothesis and Validation](#page-4-project-hypothesis-and-validation)
    - [Page 5: Model Performance ](#page-5-model-performance)
    - [Page 6: ML Metrics](#page-6-ml-metrics)
-7. [Unfixed Bugs](#unfixed-bugs)
+7. [Fixed Bugs](#fixed-bugs)
 8. [Deployment](#deployment)
 9. [Main Data Analysis & Machine Learning Libraries](#main-data-analysis--machine-learning-libraries)
 10. [Run locally](#run-locally)
-11. [Credits](#credits)
-12. [Acknowledgements](#acknowledgements)
+11. [Acknowledgements](#acknowledgements)
+12. [Project Process](#project-process)
+13. [Credits](#credits)
 
 ## Project Dataset
 
-Dataset used provided by Code Institute.
+The Cherry Leaves Dataset used for this project was provided by Code Institute. 
 
-I have not included the actual data in this repo, if you would like to inspect the dataset, please follow the steps in [Run locally](#run-locally) to download the dataset to your local machine.
+- Here is the link to the dataset [Kaggle](https://www.kaggle.com/codeinstitute/cherry-leaves). 
 
-## Dataset Content
-
-- The dataset is sourced from [Kaggle](https://www.kaggle.com/codeinstitute/cherry-leaves). We then created a fictitious user story where predictive analytics can be applied in a real project in the workplace.
-- The dataset contains +4 thousand images taken from the client's crop fields. The images show healthy cherry leaves and cherry leaves that have powdery mildew, a fungal disease that affects many plant species. The cherry plantation crop is one of the finest products in their portfolio, and the company is concerned about supplying the market with a compromised quality product.
+- The dataset contains +4 thousand images taken from the client's (fictive) crop fields. The images show healthy cherry leaves and cherry leaves that have powdery mildew, a fungal disease that affects many plant species. The cherry plantation crop is one of the finest products in their portfolio, and the company is concerned about supplying the market with a compromised quality product.
 
 ## Business Requirements
 
-The cherry plantation crop from Farmy & Foods is facing a challenge where their cherry plantations have been presenting powdery mildew. Currently, the process is manual verification if a given cherry tree contains powdery mildew. An employee spends around 30 minutes in each tree, taking a few samples of tree leaves and verifying visually if the leaf tree is healthy or has powdery mildew. If there is powdery mildew, the employee applies a specific compound to kill the fungus. The time spent applying this compound is 1 minute. The company has thousands of cherry trees located on multiple farms across the country. As a result, this manual process is not scalable due to the time spent in the manual process inspection.
+The cherry plantation crop from Farmy & Foods (fictional) is facing a challenge where their cherry plantations have been presenting powdery mildew. Currently, the process is manual verification if a given cherry tree contains powdery mildew. An employee spends around 30 minutes in each tree, taking a few samples of tree leaves and verifying visually if the leaf tree is healthy or has powdery mildew. If there is powdery mildew, the employee applies a specific compound to kill the fungus. The time spent applying this compound is 1 minute. The company has thousands of cherry trees located on multiple farms across the country. As a result, this manual process is not scalable due to the time spent in the manual process inspection.
 
 To save time in this process, the IT team suggested an ML system that detects instantly, using a leaf tree image, if it is healthy or has powdery mildew. A similar manual process is in place for other crops for detecting pests, and if this initiative is successful, there is a realistic chance to replicate this project for all other crops. The dataset is a collection of cherry leaf images provided by Farmy & Foods, taken from their crops.
 
@@ -64,19 +62,19 @@ How to validate: Conducting an average image study of cherry leaves, with and wi
 2. Data Visualization, Cleaning, and Preparation: Involves visualizing, cleaning, and preparing the dataset for model training, ensuring data quality and integrity.
 3. Model Training, Optimization, and Validation: Covers the design, training, optimization, and validation of a neural network model to predict cherry leaf health status.
 4. Dashboard Planning, Designing, and Development: Encompasses the planning, designing, and development of an interactive dashboard interface for users to explore project findings and make live predictions.
-5. Dashboard Deployment and Release: Focuses on deploying the dashboard to a web hosting platform and releasing it for user access, ensuring accessibility and usability.
+5. Dashboard Deployment and Release: Focuses on deploying the dashboard to a web hosting platform (Heroku) and releasing it for user access, ensuring accessibility and usability.
 
 
 ### User Stories:
 
 Information Gathering and Data Collection
-1. User Story: As a developer, I can gather relevant information and collect the cherry leaf image dataset for the project.
-- Task: Obtain cherry leaf images from the provided Kaggle repository and ensure compliance with the non-disclosure agreement (NDA) for data sharing and save the images in a new relevant folder structure.
+1. User Story: As a developer, I can gather relevant information and collect the cherry leaves image dataset for the project.
+- Task: Obtain cherry leaves images from the provided Kaggle repository and ensure compliance with the non-disclosure agreement (NDA), for data sharing and save the images in a new relevant folder structure.
 
 Data Visualization, Cleaning, and Preparation
 1. User Story: As a developer, I can visualize and explore the dataset to understand its characteristics and identify patterns relevant to powdery mildew detection.
 - Task: Generate average images, variability images, and image montages for healthy and powdery mildew cherry leaves to fulfill Business Requirement 1. 
-2. User Story: As a developer, I can clean and prepare the dataset for model training, addressing any missing values or outliers.
+2. User Story: As a developer, I can clean, resize and prepare the dataset for model training.
 - Task: Implement data cleaning techniques and resize images to a smaller shape to reduce model size and enable smoother GitHub pushes.
 
 Model Training, Optimization, and Validation
@@ -84,7 +82,7 @@ Model Training, Optimization, and Validation
 1. User Story: As a developer, I can design and train a neural network model to predict whether a cherry leaf is healthy or contains powdery mildew.
 - Task: Define the neural network architecture, train the model on the prepared dataset, and optimize hyperparameters to achieve a minimum accuracy of 97%.
 2. User Story: As a developer, I can validate the model's performance using appropriate metrics to ensure it meets the client's performance goal.
-- Task: Evaluate the trained model's performance using metrics such as accuracy, precision, recall, and F1-score, ensuring it meets the minimum accuracy requirement.
+- Task: Evaluate the trained model's performance, ensuring it meets the minimum accuracy requirement.
 
 Dashboard Planning, Designing, and Development:
 
@@ -112,23 +110,23 @@ Proposed Solution:
 Implement a machine learning (ML) system based on convolutional neural networks (CNNs) to automate the detection of powdery mildew in cherry leaves. By leveraging image processing techniques and deep learning algorithms, the proposed solution aims to analyze cherry leaf images and classify them as healthy or infected with powdery mildew with high accuracy and efficiency.
 
 Business Benefits:
-1. Time Savings: By automating the detection process, Farmy & Foods can significantly reduce the time spent on manual inspections, enabling employees to focus on other critical tasks and increasing overall operational efficiency.
+1. Time Savings: By automating the detection process, Farmy & Foods can significantly reduce the time spent on manual inspections, enabling employees to focus on other critical tasks.
 2. Cost Reduction: The implementation of an ML-based solution eliminates the need for manual labor-intensive inspections, leading to cost savings associated with labor, resources, and potential crop loss due to undetected infections.
 3. Scalability: The proposed solution can scale to handle the inspection of large-scale cherry plantations, allowing Farmy & Foods to maintain consistent quality standards across all farms and effectively manage their agricultural operations.
 4. Quality Assurance: By accurately detecting powdery mildew in cherry leaves, the ML system ensures the timely identification and treatment of infected trees, preserving the quality and integrity of cherry products and enhancing customer trust and satisfaction.
 
 Success Criteria:
-1. Accuracy: Achieve a minimum accuracy rate of 97% in classifying cherry leaves as healthy or infected with powdery mildew, ensuring reliable detection performance across different farm environments and conditions.
+1. Accuracy: Achieve a minimum accuracy rate of 97% in classifying cherry leaves as healthy or infected with powdery mildew.
 2. Efficiency: Reduce the inspection time per cherry tree from 30 minutes to near-instantaneous detection using the ML system, allowing Farmy & Foods to streamline their agricultural operations and respond promptly to infections.
-3. Scalability: Deploy a scalable solution capable of handling the inspection of thousands of cherry trees across multiple farms, accommodating the company's growth and expansion plans without compromising detection accuracy or performance.
+3. Scalability: Deploy a scalable solution capable of handling the inspection of thousands of cherry trees,accommodating the company's growth and expansion plans without compromising detection accuracy or performance.
 
 Risk Mitigation:
 1. Data Privacy: Adhere to non-disclosure agreements (NDAs) and ethical guidelines when handling and processing sensitive data, ensuring the confidentiality and security of cherry leaf images and related information.
 2. Model Robustness: Conduct rigorous testing and validation of the ML model to ensure its robustness and reliability in detecting powdery mildew under various environmental conditions and image quality constraints.
-3. Deployment Challenges: Collaborate closely with IT and operational teams to address any technical challenges or infrastructure requirements during the deployment of the ML system, ensuring seamless integration with existing workflows and systems.
+3. Deployment Challenges: Collaborate closely with IT and operational teams, to address any technical challenges or infrastructure requirements during the deployment of the ML system, ensuring seamless integration with existing workflows and systems.
 
 Conclusion:
-By leveraging machine learning technology to automate the detection of powdery mildew in cherry leaves, Farmy & Foods can achieve significant improvements in operational efficiency, cost savings, and product quality assurance. The proposed ML solution not only addresses the immediate challenge of powdery mildew detection but also lays the foundation for future innovations and applications in agricultural pest and disease management, positioning Farmy & Foods as a leader in sustainable and technology-driven agriculture.
+By leveraging machine learning technology to automate the detection of powdery mildew in cherry leaves, Farmy & Foods can achieve significant improvements in operational efficiency, cost savings, and product quality assurance. 
 
 ## Dashboard design (Streamlit App User Interface)
 
@@ -144,11 +142,11 @@ Key components:
 ### Page 2: Findings
 This page presents the findings related to the study on visually differentiating healthy cherry leaves from those containing powdery mildew.
 Key components:
-- Visualizations comparing healthy and infected cherry leaves, such as histograms or scatter plots highlighting key features.
-Insights drawn from the visual analysis, such as distinguishing characteristics between healthy and infected leaves.
+- Visualizations comparing healthy and infected cherry leaves. Insights drawn from the visual analysis, such as distinguishing characteristics between healthy and infected leaves.
+- Image montage of healthy and powdery mildew cherry leaves. 
 
 ### Page 3: Prediction Interface
-This page allows users to upload cherry leaf images for live prediction of their health status.
+This page allows users to upload cherry leaves images for live prediction of their health status.
 Key components:
 - A file uploader widget enabling users to upload multiple images.
 - For each uploaded image, display:
@@ -164,24 +162,18 @@ Key components:
 ### Page 4: Project Hypothesis and Validation
 This page outlines the project hypothesis and how it was validated throughout the project lifecycle.
 Key components:
-- Project hypothesis statement.
+- Project hypothesis. 
 - Description of the validation approach, including data collection, model training, and evaluation methods.
 - Summary of validation results and their alignment with the project hypothesis.
 
-### Page 5: Model Performance 
+### Page 5: ML Metrics
 This page provides technical details on the performance of the ML model developed for cherry leaf health prediction.
 Key components:
-- Model architecture overview, including the types of layers and parameters used.
-- Performance metrics such as accuracy, precision, recall, and F1-score.
-- Visualizations of model performance, such as confusion matrices or ROC curves.
-
-### Page 6: ML Metrics
 - Provide metrics from model training presented visually
 - Provide metrics from model evaluation presented visually
-- Provide True Positives(TP), True Negatives(TN), False Positives(FN) and False Negatives(FN) from model evaluation presented visually
-- Provide scikit-learns classification report from model evalutation
+- Visualizations of model performance and accuracy.
 
-## Unfixed Bugs
+## Fixed Bugs
 
 ### Collect data set from Kaggle
 
@@ -220,37 +212,32 @@ This project was deployed to [Heroku](https://heroku.com/) using the following s
 
 ## Main Data Analysis and Machine Learning Libraries
 
-__Main Data analysis libraries used__:
+- Numpy:
+- For efficient calculations on large datasets, particularly pixel data.
+- Normalizing pixel data.
+- Calculating means and standard deviations.
+- Serving as a foundation for other data analysis and machine learning libraries.
 
-- Numpy
-	- For performing calculations on large amounts of data efficiently, mainly pixel data in this case
-	- Normalizing pixel data
-	- Calculating means and standard deviations
-	- Base for other data analysis and ML libraries
-- Pandas
-	- Mainly for pandas DataFrame's for easy management of large data (sampling, shuffling, concatenation etc.)
-- Matplotlib & Seaborn
-	- For plotting and visualization of data
-	- Showing images from pixel data
-	- Metric plots & Histograms
+- Pandas:
+- Utilized mainly for managing data with pandas DataFrames. 
 
-__Main Machine Learning libraries used:__
+- Matplotlib & Seaborn:
+- Used for data visualization, including plotting and displaying images from pixel data.
+- Generating metric plots and histograms.
 
-- TensorFlow & Keras
-	- Image augmentation
-	- Model loading
-	- Defining model architecture
-	- Training model
-	- One-hot encoding
-	- tensorflow.data.Datset API
-- Scikit Learn
-	- Hyperparameter optimization using GridSearchCV
-	- Generating confusion matrixes & classification reports
-- OpenCV
-	- Reading images pixel data as NumPy arrays
-	- Resizing images
-- Scikeras
-	- For performing GridSearchCV on Keras models which is not compatible by default with scikit-learn. (KerasClassifier)
+- Main Machine Learning libraries used:
+
+- TensorFlow & Keras:
+- Employed for image augmentation, model loading, defining architecture, and training models.
+
+- Scikit Learn:
+- Utilized for hyperparameter optimization through GridSearchCV.
+
+- OpenCV:
+- Used for image resizing.
+
+- Scikeras:
+- Enabled GridSearchCV functionality on Keras models, addressing compatibility issues with scikit-learn.
 
 ## Run locally
 
@@ -278,25 +265,36 @@ sudo apt-get update
 sudo apt-get install -y libgl1-mesa-dev
 ```
 
-## Credits
+## Acknowledgements
 
+- I would like to express my gratitude to my mentor, Luke Buchanan. His invaluable advice and unwavering support have been instrumental throughout this course. Thanks for your guidance every step of the way.
+
+- And to my husband, whose unwavering support has been the cornerstone of my journey into a new career and field. Your encouragement and belief in me have made all the difference.
+
+## Project Process
+
+- After following my plan for the project, I encountered my first obstacle during the deployment phase to Heroku. Despite following instructions regarding slug size from the Slack channel, I realized that the primary issue stemmed from my decision to use the original image size for training the model. While this choice aimed to maintain model quality, it lead to compatibility challenges during deployment. To address this, I revised the notebook to restructure the code and resize images for model training.
+
+Additionally, I decided to incorporate hyperparameter optimization to enhance the model's reliability and robustness. Drawing inspiration from the structure of the linx02 - genderpredictor project, I structured my approach similarly, but without implementing dropout layers in the model. Instead, I integrated an early stopping mechanism to prevent overfitting the model.
+
+However, my first attempt at introducing hyperparameters resulted in a significant drop in accuracy—from 98% to 65%, due to hyperparameters and resized images. Recognizing the likelihood of overfitting, I revisited the genderprediction project and explored strategies for addressing this issue. By introducing dropout layers and refining the early stopping parameters, along with adjusting the hyperparameter grid, I managed to elevate the model's performance to 99%.
+
+Despite the initial setback and the realization that the model could be further optimized, I viewed this experience as an integral part of the learning journey. It underscored the iterative nature of real-world machine learning projects, where I imagine adjustments and reassessments are part of the daily work. Even if I hadn't achieved the desired accuracy outlined in the business case, I remained committed to prioritizing deepening my understanding of machine learning. This project was the best way for me to do so, with hyperparameter optimization being a crucial aspect. I prioritized learning and refinement over achieving maximum accuracy performance.
+
+While acknowledging room for further refinement and testing, especially given the complexity of image classification, I am immensely gratified by the growth I've experienced throughout this project and the insights I have gained. I look forward to continued learning and exploration in the field of machine learning.
+
+## Credits
 
 ### Content
 
 - [Churnometer repo by Code Institute](https://github.com/Code-Institute-Solutions/churnometer#readme): For the Readme template/structure.
 
-- [Gender predictor](https://github.com/linx02/genderpredictor/tree/main): For the Readme template/structure.
+- [Walkthrough project 1 - Malaria](https://github.com/Code-Institute-Solutions/WalkthroughProject01/tree/main): For the code structure and parts of the code for the notebook. 
+
+- [Gender predictor](https://github.com/linx02/genderpredictor/tree/main): For the Readme template/structure and for code. 
 
 - [Streamlit documentation](https://docs.streamlit.io/): For getting the web app up and running.
 
+- [Chatgpt](https://chatgpt.com/): For instructions and suggestions on how to tune my model during overfitting. 
+
 - [Solve error with using OpenCV](https://stackoverflow.com/questions/55313610/importerror-libgl-so-1-cannot-open-shared-object-file-no-such-file-or-directo)
-
-
-### Media
-
-- The photos used on the home and sign-up page are from This Open-Source site.
-- The images used for the gallery page were taken from this other open-source site.
-
-## Acknowledgements
-
-- 
