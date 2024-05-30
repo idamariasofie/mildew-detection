@@ -54,7 +54,7 @@ def load_model_and_predict(my_image):
     Load and perform ML prediction over live images
     """
 
-    model = load_model("/workspace/mildew-detection/outputs/trained_model.h5")
+    model = load_model("outputs/trained_model.h5")
 
     # Print the shape of the input image
     print("Shape of input image:", my_image.shape)
