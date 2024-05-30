@@ -296,6 +296,8 @@ While acknowledging room for further refinement and testing, especially given th
 
 - [Gender predictor](https://github.com/linx02/genderpredictor/tree/main): For the Readme template/structure and for code. 
 
+- [ImageClassification](https://github.com/nicknochnack/ImageClassification/tree/main): For code and structore on how to clean dataset and remove dodgy images. 
+
 - [Streamlit documentation](https://docs.streamlit.io/): For getting the web app up and running.
 
 - [Chatgpt](https://chatgpt.com/): For instructions and suggestions on how to tune my model during overfitting. 
