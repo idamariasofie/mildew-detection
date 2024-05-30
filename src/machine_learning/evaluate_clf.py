@@ -3,4 +3,4 @@ from src.data_management import load_pkl_file
 
 
 def load_test_evaluation():
-    return load_pkl_file('/workspace/mildew-detection/outputs/evaluation.pkl')
+    return load_pkl_file('outputs/evaluation.pkl')

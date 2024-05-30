@@ -13,8 +13,8 @@ def page_findings_body():
 
     # Checkbox for Difference between average and variability image
     if st.checkbox("Leaf Patterns: Average vs Variability"):
-        avg_healthy = plt.imread("/workspace/mildew-detection/outputs/v1/avg_var_healthy.png")
-        avg_powdery = plt.imread("/workspace/mildew-detection/outputs/v1/avg_var_powdery_mildew.png")
+        avg_healthy = plt.imread("outputs/v1/avg_var_healthy.png")
+        avg_powdery = plt.imread("outputs/v1/avg_var_powdery_mildew.png")
         st.warning("Our exploration of average and variability images revealed intriguing insights. While no distinct patterns emerged, we observed subtle differences in color pigment.")
         st.image(avg_healthy, caption='Healthy Leaf - Average and Variability')
         st.image(avg_powdery, caption='Powdery Mildew Leaf - Average and Variability')
